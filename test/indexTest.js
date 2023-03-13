@@ -43,7 +43,7 @@ describe('index.js', () => {
 
     it("contains the first initial of the name stored in the 'currentUser' variable", () => {
       const firstInitial = currentUser[0];
-      const restOfName = currentUser.slice(1);
+      const restOfName = currentUser.slice();
 
       expect(shortGreeting).to.have.string(firstInitial);
       expect(shortGreeting).to.not.have.string(restOfName);
